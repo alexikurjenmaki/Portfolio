@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alexi's portfolio</title>
+    <link rel="stylesheet" href="styles/index.css" />
+    <link rel="icon" sizes="any" href="./images/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Radley:ital@0;1&display=swap" rel="stylesheet">
+</head>
+
+
+
+<body>
+
+    <div class="taide2">
+        <div class="wave2">
+            <p> </p>
+        </div>
+    </div>
+
+
+    <header class="palkki">
+        <div class="head">
+            <nav>
+                <button class="menu-toggle">☰</button>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="experiences.html">Experiences</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <div class="taide">
+        <div class="wave">
+            <p> </p>
+        </div>
+    </div>
+
+    <div class="moti">
+        <p>Please, fellow reader,<br><br>go out and see,<br><br>do, experience, and fail!<br><br>
+            Enjoy the process.<br><br>
+            Eventually it will<br><br>reward you with<br><br>
+            the fine results.</p>
+    </div>
+
+    <div>
+
+
+        <div class="eka">
+            <div class="laatikko" id="blackbox">
+                <div class="text-container">
+
+                    <div class="headline">
+                        <h2>Projects</h2>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="lore">
+        </div>
+
+        <div class="feed">
+
+            <div class="content">
+                <div class="boxes">
+                    <button class="mode-button"></button>
+
+                    <div class="laatikko2">
+                        <div class="container2">
+                            <p>Developed and launched<br>a comprehensive course<br>on CFD and futures<br>trading.
+                                Managed all aspects<br>of the project,<br>including marketing,<br>content
+                                creation,<br>project management, and<br>customer experience.<br>
+                                Successfully acquired<br>the first customers<br>without external<br>resources.</p>
+                        </div>
+                    </div>
+
+                    <div class="laatikko2">
+                        <div class="container2">
+                            <p>Project Work in<br><br>FDF Special Forces<br><br>
+                                (June 2023 – June 2024)<br><br>Gained invaluable<br><br>leadership and<br><br>teamwork
+                                experience<br><br>through
+                                large-scale<br><br>projects.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="laatikko2">
+                        <div class="container2">
+                            <p>Aalto-3 Satellite<br><br>Project
+                                (2024 fall)<br><br>Designed the project<br><br>logo and gained<br><br>practical insights
+                                into<br><br>satellite development.<br><br>
+                                Multidisciplinary<br><br>work.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="kuvat">
+
+                    <div class="container">
+                        <img src="images/tausta.PNG" alt="A photo of an elegant pillar/wall and Alexi's logo."
+                            class="maisema" />
+                    </div>
+
+                    <div class="pallo">
+                        <a href="projects.html" class="button-link">Projects</a>
+                    </div>
+
+                    <div class="me">
+                        <img src="images/me.JPEG" alt="A photo of Alexi." class="me" />
+                    </div>
+
+                    <div class="pallo">
+                        <a href="experiences.html" class="button-link">Experiences</a>
+                    </div>
+
+                    <div class="book">
+                        <img src="images/sky.PNG" alt="An abstract photo of sky and Alexi's logo" class="book" />
+                    </div>
+
+                    <div class="pallo">
+                        <a href="index.html" class="button-link">Home</a>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <div class="space">
+        <p> </p>
+    </div>
+
+
+    <footer>
+        <div class="footer1">
+            <a href="https://www.linkedin.com/in/alexikurjenmaki/" target="_blank" rel="noopener noreferrer">
+                <img src="images/linkedin.png" alt="LinkedIn" class="linkedin" width="30">
+            </a>
+            <a href="https://www.instagram.com/alexikurjenmaki/" target="_blank" rel="noopener noreferrer">
+                <img src="images/ig.png" alt="IG" class="ig" width="30">
+            </a>
+            <a href="mailto:alexi.kurjenmaki@gmail.com?subject=Portfolio%20Inquiry&body=Hello%20Alexi!">
+                <img src="images/mail.png" alt="Email" class="mail" width="40">
+            </a>
+        </div>
+    </footer>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuToggle = document.querySelector(".menu-toggle");
+            const navLinks = document.querySelector(".nav-links");
+            const overlay = document.createElement("div");
+            overlay.className = "overlay";
+            document.body.appendChild(overlay);
+
+            menuToggle.addEventListener("click", function () {
+                navLinks.classList.toggle("show");
+                overlay.classList.toggle("show");
+            });
+
+            overlay.addEventListener("click", function () {
+                navLinks.classList.remove("show");
+                overlay.classList.remove("show");
+            });
+
+
+            //Here is the code for the theme switcher.
+
+            const modeButton = document.querySelector(".mode-button");
+            const theDivs = document.querySelectorAll(".divs");
+
+            // Here you get the saved mode preference.
+            if (localStorage.getItem("darkMode") === "enabled") {
+                document.body.classList.add("mode");
+                modeButton.classList.add("active");
+            }
+
+            modeButton.addEventListener("click", () => {
+                document.body.classList.toggle("mode");
+                modeButton.classList.toggle("active");
+
+                // Here you save mode preference.
+                if (document.body.classList.contains("mode")) {
+                    localStorage.setItem("darkMode", "enabled");
+                } else {
+                    localStorage.setItem("darkMode", "disabled");
+                }
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>

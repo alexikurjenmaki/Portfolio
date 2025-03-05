@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alexi's portfolio</title>
+  <link rel="stylesheet" href="styles/index.css" />
+  <link rel="icon" sizes="any" href="./images/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Radley:ital@0;1&display=swap" rel="stylesheet">
+</head>
+
+
+
+<body>
+
+  <div class="taide2">
+    <div class="wave2">
+      <p> </p>
+    </div>
+  </div>
+
+
+  <header class="palkki">
+    <div class="head">
+      <nav>
+
+        <button class="menu-toggle">☰</button>
+
+        <ul class="nav-links">
+
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="experiences.html">Experiences</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+
+  <div class="taide">
+    <div class="wave">
+      <p> </p>
+    </div>
+  </div>
+
+  <div class="moti">
+    <p>Please, fellow reader, think<br><br>how the small day to day steps...<br><br>lead to... where?<br><br>Well, you
+      can luckily
+      deside!</p>
+  </div>
+
+
+
+  <div class="eka">
+
+
+    <div class="laatikko" id="blackbox">
+
+      <div class="text-container">
+
+        <div class="headline">
+          <h3>Hello!</h3>
+          <h3>Here are some steps taken by</h3>
+          <h2>Alexi Kurjenmäki</h2>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="lore">
+  </div>
+
+  <div class="feed">
+
+    <div class="content">
+      <div class="boxes">
+
+        <button class="mode-button"></button>
+
+        <div class="laatikko2">
+          <div class="container2">
+            <p>He is currently focusing<br><br> on learning modern skills,<br><br> gaining new experiences<br><br>and
+              building<br><br>technological expertise<br><br>at Aalto University.</p>
+          </div>
+        </div>
+
+        <div class="laatikko2">
+          <div class="container2">
+            <p>His future plans:<br><br><br>bring positiveness to<br><br><br>many via genius innovation.</p>
+          </div>
+        </div>
+
+        <div class="laatikko2">
+          <div class="container2">
+            <p>As an<br><br>Information Networks<br><br>student,<br><br>an FDF Special Forces<br><br>-trained team
+              player,<br><br>
+              and a positive person<br><br>with entrepreneurial<br><br>mindset, Alexi has eye
+              for<br><br>holistic
+              solutions.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="kuvat">
+
+        <div class="container">
+          <img src="images/tausta.PNG" alt="A photo of an elegant pillar/wall and Alexi's logo." class="maisema" />
+        </div>
+
+        <div class="pallo">
+          <a href="projects.html" class="button-link">Projects</a>
+        </div>
+
+        <div class="me">
+          <img src="images/me.JPEG" alt="A photo of Alexi." class="me" />
+        </div>
+
+        <div class="pallo">
+          <a href="experiences.html" class="button-link">Experiences</a>
+        </div>
+
+        <div class="book">
+          <img src="images/sky.PNG" alt="An abstract photo of sky and Alexi's logo" class="book" />
+        </div>
+
+        <div class="pallo">
+          <a href="index.html" class="button-link">Home</a>
+        </div>
+
+      </div>
+
+
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="accordion">
+      <div class="accordion-item">
+        <div class="accordion-header">Achievements</div>
+        <div class="accordion-content">
+          - Lean Six Sigma Green Belt<br>Diploma of Recognition (Theory), <br>
+          - Pro Scientia medal for satisfactory performance<br>
+          in physics & chemistry on baccalaureate.<br>- Competitive ice hockey player for 12.5 years.
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-header">Skills</div>
+        <div class="accordion-content">
+          - Scala, SQL, JavaScript, CSS, HTML, Python<br>
+          - Leadership & Communication<br>
+          - Problem-solving, Project Management &
+          Optimization
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <div class="space">
+    <p></p>
+  </div>
+
+  <div class="reach">
+    <p>Reach out if you want to</p>
+    <p>discuss about anything!</p>
+  </div>
+
+
+
+  <footer>
+    <div class="footer1">
+      <a href="https://www.linkedin.com/in/alexikurjenmaki/" target="_blank" rel="noopener noreferrer">
+        <img src="images/linkedin.png" alt="LinkedIn" class="linkedin">
+      </a>
+      <a href="https://www.instagram.com/alexikurjenmaki/" target="_blank" rel="noopener noreferrer">
+        <img src="images/ig.png" alt="IG" class="ig">
+      </a>
+      <a href="mailto:alexi.kurjenmaki@gmail.com?subject=Portfolio%20Inquiry&body=Hello%20Alexi!">
+        <img src="images/mail.png" alt="Email" class="mail">
+      </a>
+    </div>
+  </footer>
+
+
+  <script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+
+      // Here is the code for the mobile menu.
+
+      const menuToggle = document.querySelector(".menu-toggle");
+      const navLinks = document.querySelector(".nav-links");
+      const overlay = document.createElement("div");
+      overlay.className = "overlay";
+      document.body.appendChild(overlay);
+
+      menuToggle.addEventListener("click", function () {
+        navLinks.classList.toggle("show");
+        overlay.classList.toggle("show");
+      });
+
+      overlay.addEventListener("click", function () {
+        navLinks.classList.remove("show");
+        overlay.classList.remove("show");
+      });
+
+
+      //Here is the code for the theme switcher.
+
+      const modeButton = document.querySelector(".mode-button");
+      const theDivs = document.querySelectorAll(".divs");
+
+      // Here you get the saved mode preference.
+      if (localStorage.getItem("darkMode") === "enabled") {
+        document.body.classList.add("mode");
+        modeButton.classList.add("active");
+      }
+
+      modeButton.addEventListener("click", () => {
+        document.body.classList.toggle("mode");
+        modeButton.classList.toggle("active");
+
+        // Here you save mode preference.
+        if (document.body.classList.contains("mode")) {
+          localStorage.setItem("darkMode", "enabled");
+        } else {
+          localStorage.setItem("darkMode", "disabled");
+        }
+      });
+
+
+      // Here is the code for the accordion.
+
+      document.querySelectorAll('.accordion-header').forEach(header => {
+        header.addEventListener('click', () => {
+          const item = header.parentElement;
+          const content = item.querySelector('.accordion-content');
+
+          // This to close the other item when one is clicked.
+          document.querySelectorAll('.accordion-item').forEach(otherItem => {
+            if (otherItem !== item) {
+              otherItem.classList.remove('active');
+              const otherContent = otherItem.querySelector('.accordion-content');
+              otherContent.style.maxHeight = null;
+            }
+          });
+
+
+          item.classList.toggle('active');
+          if (item.classList.contains('active')) {
+            content.style.maxHeight = content.scrollHeight + "px";
+          } else {
+            content.style.maxHeight = null;
+          }
+        });
+      });
+
+    });
+  </script>
+</body>
+
+</html>
